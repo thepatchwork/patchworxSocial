@@ -13,6 +13,10 @@ import FBSDKCoreKit
 
 class SignInViewController: UIViewController {
 
+    @IBOutlet weak var emailField: FancyField!
+    @IBOutlet weak var passwordField: FancyField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -50,4 +54,23 @@ class SignInViewController: UIViewController {
 
     })
 }
+    @IBAction func emailSignInTapped(_ sender: Any) {
+        
+        if let email = emailField.text, let pwd = passwordField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                if error == nil {
+                    print("PAUL: EMAIL USER AUTHENTICATED SUCCESSFULLY WITH FIREBASE")
+                } else {
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                        if error != nil {
+                            print("PAUL: UNABLE TO AUTHENTICATE WITH FIREBASE USING EMAIL")
+                            } else {
+                            print("PAUL: SUCCESSFULLY AUTHENTICATED WITH FIREBASE")
+                        }
+                    })
+                }
+            })
+        }
+        
+    }
 }
