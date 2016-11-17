@@ -23,6 +23,7 @@
 /* Begin PBXFileReference section */
 		4E06C7398A59B8C956FB33EB /* Pods-PatchworxSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatchworxSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-PatchworxSocial/Pods-PatchworxSocial.release.xcconfig"; sourceTree = "<group>"; };
 		8011A8947EF870055579ADB6 /* Pods_PatchworxSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatchworxSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96516B691DDDF43700577F18 /* PatchworxSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PatchworxSocial.entitlements; sourceTree = "<group>"; };
 		9682B4331DDDCCAC004A1B8A /* PatchworxSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatchworxSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9682B4361DDDCCAC004A1B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9682B4381DDDCCAC004A1B8A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		9682B4351DDDCCAC004A1B8A /* PatchworxSocial */ = {
 			isa = PBXGroup;
 			children = (
+				96516B691DDDF43700577F18 /* PatchworxSocial.entitlements */,
 				9682B44F1DDDE034004A1B8A /* Util */,
 				9682B44A1DDDD0D6004A1B8A /* Model */,
 				9682B44B1DDDD0DA004A1B8A /* View */,
@@ -172,6 +174,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = DRM46W5594;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -389,6 +396,7 @@
 			baseConfigurationReference = F99BA64ACB5869CE0240E898 /* Pods-PatchworxSocial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PatchworxSocial/PatchworxSocial.entitlements;
 				DEVELOPMENT_TEAM = DRM46W5594;
 				INFOPLIST_FILE = PatchworxSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -403,6 +411,7 @@
 			baseConfigurationReference = 4E06C7398A59B8C956FB33EB /* Pods-PatchworxSocial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PatchworxSocial/PatchworxSocial.entitlements;
 				DEVELOPMENT_TEAM = DRM46W5594;
 				INFOPLIST_FILE = PatchworxSocial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
