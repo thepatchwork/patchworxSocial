@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 import FBSDKCoreKit
+import SwiftKeychainWrapper
 
 class SignInViewController: UIViewController {
 
@@ -19,12 +20,16 @@ class SignInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: nil)
+        }
+        
     }
 
     @IBAction func facebookLogin(_ sender: Any) {
@@ -50,27 +55,45 @@ class SignInViewController: UIViewController {
                 print("PAUL: UNABLE TO AUTHENTICATE WITH FIREBASE \(error)")
             } else {
                 print("PAUL: SUCCESSFULLY AUTHED WITH FIREBASE")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
-
-    })
+        })
 }
+    
+    
     @IBAction func emailSignInTapped(_ sender: Any) {
         
         if let email = emailField.text, let pwd = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("PAUL: EMAIL USER AUTHENTICATED SUCCESSFULLY WITH FIREBASE")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("PAUL: UNABLE TO AUTHENTICATE WITH FIREBASE USING EMAIL")
                             } else {
                             print("PAUL: SUCCESSFULLY AUTHENTICATED WITH FIREBASE")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
             })
         }
         
+    }
+    
+    func completeSignIn(id: String) {
+
+            let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+            print("PAUL: DATA SAVED TO KEYCHAIN \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: nil)
+
     }
 }
