@@ -10,6 +10,7 @@
 		853A87F4BF7C56C3B404DA82 /* Pods_PatchworxSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011A8947EF870055579ADB6 /* Pods_PatchworxSocial.framework */; };
 		965A8A051DE43FB800AE7DFA /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A8A041DE43FB800AE7DFA /* CircleView.swift */; };
 		965A8A071DE44CE100AE7DFA /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A8A061DE44CE100AE7DFA /* PostTableViewCell.swift */; };
+		965A8A0A1DE45AA000AE7DFA /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A8A091DE45AA000AE7DFA /* DataService.swift */; };
 		9672455C1DE3322A00D30790 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672455B1DE3322A00D30790 /* FeedViewController.swift */; };
 		9682B4371DDDCCAC004A1B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B4361DDDCCAC004A1B8A /* AppDelegate.swift */; };
 		9682B4391DDDCCAC004A1B8A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B4381DDDCCAC004A1B8A /* SignInViewController.swift */; };
@@ -29,6 +30,7 @@
 		96516B691DDDF43700577F18 /* PatchworxSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PatchworxSocial.entitlements; sourceTree = "<group>"; };
 		965A8A041DE43FB800AE7DFA /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		965A8A061DE44CE100AE7DFA /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		965A8A091DE45AA000AE7DFA /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		9672455B1DE3322A00D30790 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9682B4331DDDCCAC004A1B8A /* PatchworxSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatchworxSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9682B4361DDDCCAC004A1B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		965A8A081DE45A8300AE7DFA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				965A8A091DE45AA000AE7DFA /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		9682B42A1DDDCCAC004A1B8A = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		9682B4351DDDCCAC004A1B8A /* PatchworxSocial */ = {
 			isa = PBXGroup;
 			children = (
+				965A8A081DE45A8300AE7DFA /* Services */,
 				96516B691DDDF43700577F18 /* PatchworxSocial.entitlements */,
 				9682B44F1DDDE034004A1B8A /* Util */,
 				9682B44A1DDDD0D6004A1B8A /* Model */,
@@ -285,6 +296,7 @@
 				9682B4511DDDE047004A1B8A /* Constants.swift in Sources */,
 				9672455C1DE3322A00D30790 /* FeedViewController.swift in Sources */,
 				965A8A071DE44CE100AE7DFA /* PostTableViewCell.swift in Sources */,
+				965A8A0A1DE45AA000AE7DFA /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
