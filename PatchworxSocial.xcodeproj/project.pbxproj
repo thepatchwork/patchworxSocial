@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		853A87F4BF7C56C3B404DA82 /* Pods_PatchworxSocial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8011A8947EF870055579ADB6 /* Pods_PatchworxSocial.framework */; };
+		965A8A051DE43FB800AE7DFA /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965A8A041DE43FB800AE7DFA /* CircleView.swift */; };
 		9672455C1DE3322A00D30790 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9672455B1DE3322A00D30790 /* FeedViewController.swift */; };
 		9682B4371DDDCCAC004A1B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B4361DDDCCAC004A1B8A /* AppDelegate.swift */; };
 		9682B4391DDDCCAC004A1B8A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9682B4381DDDCCAC004A1B8A /* SignInViewController.swift */; };
@@ -25,6 +26,7 @@
 		4E06C7398A59B8C956FB33EB /* Pods-PatchworxSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatchworxSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-PatchworxSocial/Pods-PatchworxSocial.release.xcconfig"; sourceTree = "<group>"; };
 		8011A8947EF870055579ADB6 /* Pods_PatchworxSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PatchworxSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96516B691DDDF43700577F18 /* PatchworxSocial.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PatchworxSocial.entitlements; sourceTree = "<group>"; };
+		965A8A041DE43FB800AE7DFA /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		9672455B1DE3322A00D30790 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		9682B4331DDDCCAC004A1B8A /* PatchworxSocial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PatchworxSocial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9682B4361DDDCCAC004A1B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				9682B44D1DDDDFC0004A1B8A /* FancyView.swift */,
 				9682B4521DDDE1DB004A1B8A /* RoundButton.swift */,
 				9682B4541DDDE34B004A1B8A /* FancyField.swift */,
+				965A8A041DE43FB800AE7DFA /* CircleView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				965A8A051DE43FB800AE7DFA /* CircleView.swift in Sources */,
 				9682B4551DDDE34B004A1B8A /* FancyField.swift in Sources */,
 				9682B4391DDDCCAC004A1B8A /* SignInViewController.swift in Sources */,
 				9682B4531DDDE1DB004A1B8A /* RoundButton.swift in Sources */,
